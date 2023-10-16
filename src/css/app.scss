@@ -1,0 +1,175 @@
+// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Gabarito&display=swap");
+
+body {
+  font-family: "Gabarito", sans-serif;
+  color: $dark-strong; // rgba(45, 59, 78, 0.5)
+}
+
+.welcome-font {
+  font-family: "Roboto Slab", serif;
+}
+
+.bg-dark {
+  background: $dark;
+  color: $dark-strong;
+}
+
+.bg-dark {
+  color: $dark-strong;
+}
+
+.bg-dark-secondary {
+  background: $dark-secondary;
+  color: $dark-strong;
+}
+
+.bg-light-secondary {
+  background: $light-secondary;
+  color: $dark-strong;
+}
+
+.bg-light {
+  background: $light;
+  color: $dark-strong;
+}
+
+.rounded-borders {
+  border-radius: 15px;
+}
+
+.rounded-borders-lg {
+  border-radius: 25px;
+}
+
+.rounded-borders-sm {
+  border-radius: 10px;
+}
+
+.rounded-borders-xs {
+  border-radius: 6px;
+}
+
+.fit-container {
+  height: 90%;
+}
+
+// Classes for header height and padding.
+
+.header-height {
+  height: 70px !important;
+}
+
+.margin-right-30 {
+  margin-right: 30px !important;
+}
+
+.active-item {
+  // filter: brightness(0) invert(1);
+  background: $secondary;
+  color: $white;
+}
+
+.active-svg {
+  filter: brightness(0) invert(1);
+}
+
+// Classes to implement left-drawer with 82px width.
+
+// .q-header {
+//   left: 82px !important;
+// }
+
+.q-drawer {
+  z-index: 3000;
+  border-radius: 0 15px 15px 0;
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+  //   0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+// .q-page-container {
+//   padding-left: 82px !important;
+// }
+
+// // Classes for left-drawer items
+
+// .drawer-logo-margin {
+//   margin-bottom: 30px;
+//   margin-top: 11px;
+// }
+
+.drawer-item-margin {
+  margin-bottom: 21px;
+}
+
+#transfers .q-td,
+#transfers .q-table__bottom {
+  border-width: 0 !important;
+}
+
+#transfers .q-tr {
+  border-radius: 15px;
+}
+
+.text-no-transform {
+  text-transform: none;
+}
+
+.bg-arriving {
+  background: $arriving;
+}
+
+.bg-departing {
+  background: $departing;
+}
+
+.bg-incity {
+  background: $incity;
+}
+
+.transfers-width-sm {
+  width: 5rem;
+}
+
+.transfers-width-md {
+  width: 10rem;
+}
+
+.transfers-width-lg {
+  width: 15rem;
+}
+
+.error-font {
+  font-size: 30vh;
+}
+
+.dialog-container {
+  width: 75%;
+  height: 90%;
+  max-width: initial !important;
+}
+
+.q-dialog__inner--maximized > div {
+  border-radius: 20px 20px 0 0 !important;
+}
+
+.border-r {
+  border-right: 0.5px #dddddd solid;
+}
+
+.bordered {
+  border: 0.5px #dddddd solid;
+}
+
+.border-secondary {
+  border-bottom: 3px $secondary solid;
+}
+
+.address-width {
+  width: 250px;
+}
+
+.details-bar-width {
+  width: 320px;
+}
