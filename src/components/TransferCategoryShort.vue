@@ -1,14 +1,14 @@
 <template>
   <q-badge v-if="listing.category === 'Departure'" rounded color="departing">
-    <img src="svg/departing.svg" alt="Departing" width="20" />
+    <img src="svg/departing.svg" alt="Departing" width="15" />
     <span> Departing </span>
   </q-badge>
   <q-badge v-else-if="listing.category === 'Arrival'" rounded color="arriving">
-    <img src="svg/arriving.svg" alt="Arriving" width="20" />
+    <img src="svg/arriving.svg" alt="Arriving" width="15" />
     <span> Arriving </span>
   </q-badge>
   <q-badge v-else rounded color="incity">
-    <img src="svg/oval_city.svg" alt="In City" width="20" />
+    <img src="svg/oval_city.svg" alt="In City" width="15" />
     <span> In City </span>
   </q-badge>
 </template>

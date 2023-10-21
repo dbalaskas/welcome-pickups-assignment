@@ -18,12 +18,12 @@
         <q-card-section class="row full-height">
           <div class="col-4 q-pa-lg border-r">
             <div class="q-mb-md text-center">
-              <q-avatar>
+              <q-avatar size="70px">
                 <img :src="details.traveler_photo" />
               </q-avatar>
             </div>
             <div
-              class="text-h5 text-weight-bolder text-center"
+              class="text-h6 text-weight-bold text-center"
               :title="
                 details.traveler_first_name + ' ' + details.traveler_last_name
               "
@@ -37,22 +37,19 @@
                 <div class="text-dark" :title="details.traveler.phone_number">
                   Phone Number
                 </div>
-                <div class="text-weight-bold">
+                <div>
                   {{ getPhoneNumber(details.traveler.phone_number) }}
                 </div>
               </div>
               <div>
                 <div class="text-dark">Email</div>
-                <div
-                  class="text-weight-bold ellipsis"
-                  :title="details.traveler.email"
-                >
+                <div class="ellipsis" :title="details.traveler.email">
                   {{ details.traveler.email }}
                 </div>
               </div>
               <div>
                 <div class="text-dark">Coming from</div>
-                <div class="text-weight-bold" :title="details.traveler.country">
+                <div :title="details.traveler.country">
                   {{ details.traveler.country }}
                 </div>
               </div>
@@ -68,7 +65,7 @@
             <div class="text-h5 text-weight-bold q-mb-md">Transfers</div>
             <div class="bg-light-secondary rounded-borders q-pa-lg">
               <div class="q-gutter-md no-margin">
-                <span class="text-h6 text-weight-bold border-secondary">
+                <span class="text-h6 text-weight-bold q-pb-xs border-secondary">
                   {{ getDateShort(new Date(details.datetime)) }}
                   <!-- <q-separator color="secondary" size="3px" class="q-mx-xs" /> -->
                 </span>
@@ -78,94 +75,94 @@
                     <div class="row justify-between q-mb-md">
                       <div>
                         <div
-                          class="text-body1 text-weight-bold"
+                          class="text-body1"
                           :title="details.from_location_title"
                         >
                           {{ details.from_location_title }}
                         </div>
                         <div
-                          class="text-body2 text-dark address-width ellipsis"
+                          class="text-caption text-dark address-width ellipsis"
                           :title="details.from_location_address"
                         >
                           {{ details.from_location_address }}
                         </div>
                       </div>
-                      <div
-                        class="text-body2 text-dark text-weight-bold q-mr-sm"
-                      >
+                      <div class="text-body2 text-dark q-mr-sm">
                         {{ getTime(new Date(details.from_datetime)) }}
                       </div>
                     </div>
                     <div class="row justify-between">
                       <div>
                         <div
-                          class="text-body2 text-weight-bold"
+                          class="text-body2"
                           :title="details.to_location_title"
                         >
                           {{ details.to_location_title }}
                         </div>
                         <div
-                          class="text-body2 text-dark address-width ellipsis"
+                          class="text-caption text-dark address-width ellipsis"
                           :title="details.to_location_address"
                         >
                           {{ details.to_location_address }}
                         </div>
                       </div>
-                      <div
-                        class="text-body2 text-dark text-weight-bold q-mr-sm"
-                      >
+                      <div class="text-body2 text-dark q-mr-sm">
                         {{ getTime(new Date(details.to_datetime)) }}
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="row justify-around details-bar-width bg-dark-secondary rounded-borders-lg q-px-md q-py-sm"
+                  class="details-bar-width bg-dark-secondary text-dark rounded-borders-lg q-px-md q-py-sm"
                 >
-                  <span>
-                    <q-icon name="group" size="20px" />
-                    <span class="text-body2 text-weight-medium q-ml-md">
-                      {{ details.passengers }}
+                  <div class="row q-gutter-md items-center">
+                    <span>
+                      <q-icon name="group" size="20px" />
+                      <span class="text-body2 q-ml-sm">
+                        {{ details.passengers }}
+                      </span>
                     </span>
-                  </span>
-                  <span>
-                    <q-icon name="work" size="20px" />
-                    <span class="text-body2 text-weight-medium q-ml-md">
-                      {{ details.babyseats }}
+                    <span>
+                      <q-icon name="work" size="20px" />
+                      <span class="text-body2 q-ml-sm">
+                        {{ details.babyseats }}
+                      </span>
                     </span>
-                  </span>
-                  <span>
-                    <q-icon name="business_center" size="20px" />
-                    <span class="text-body2 text-weight-medium q-ml-md">
-                      {{ details.luggage }}
+                    <span>
+                      <q-icon name="business_center" size="20px" />
+                      <span class="text-body2 q-ml-sm">
+                        {{ details.luggage }}
+                      </span>
                     </span>
-                  </span>
-                  <span>
-                    <q-icon name="airline_seat_recline_extra" size="20px" />
-                    <span class="text-body2 text-weight-medium q-ml-md">
-                      {{ details.hand_luggage }}
+                    <span>
+                      <q-icon name="airline_seat_recline_extra" size="20px" />
+                      <span class="text-body2 q-ml-sm">
+                        {{ details.hand_luggage }}
+                      </span>
                     </span>
-                  </span>
+                  </div>
                 </div>
                 <div
-                  v-if="details.flight_status"
-                  class="row justify-around details-bar-width items-center bg-dark-secondary rounded-borders-lg q-px-md q-py-sm"
+                  class="details-bar-width bg-dark-secondary text-dark rounded-borders-lg q-px-md q-py-sm"
                 >
-                  <q-icon name="flight_takeoff" size="20px" />
-                  <span class="text-body2 text-weight-medium q-px-sm">
-                    {{ details.flight_status.flight_number }}
-                  </span>
-                  <q-separator vertical class="q-mx-sm" />
-                  <q-icon name="schedule" size="20px" />
-                  <span class="text-body2 text-weight-medium q-px-sm">
-                    {{ details.flight_status.flight_time }}
-                  </span>
-                  <q-separator vertical class="q-mx-sm" />
-                  <span
-                    class="text-body2 text-secondary text-weight-medium q-px-sm"
+                  <div
+                    v-if="details.flight_status"
+                    class="row justify-around items-center"
                   >
-                    {{ details.flight_status.flight_status }}
-                  </span>
+                    <q-icon name="flight_takeoff" size="20px" />
+                    <span class="text-body2 q-px-sm">
+                      {{ details.flight_status.flight_number }}
+                    </span>
+                    <q-separator vertical class="q-mx-sm" />
+                    <q-icon name="schedule" size="20px" />
+                    <span class="text-body2 q-px-sm">
+                      {{ details.flight_status.flight_time }}
+                    </span>
+                    <q-separator vertical class="q-mx-sm" />
+                    <span class="text-body2 text-secondary q-px-sm">
+                      {{ details.flight_status.flight_status }}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

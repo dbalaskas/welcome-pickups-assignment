@@ -1,7 +1,7 @@
 <template>
   <q-btn
     flat
-    class="full-width bg-white rounded-borders-sm q-px-md q-py-xs q-mb-sm"
+    class="full-width bg-white rounded-borders-sm q-px-sm q-py-xs q-mb-sm"
     @click="openListing"
   >
     <div class="row no-wrap full-width">
@@ -9,11 +9,11 @@
         <transfer-category :listing="listing" />
       </div>
       <div class="row items-center transfers-width-lg">
-        <q-avatar class="row items-center">
+        <q-avatar class="row items-center" size="35px">
           <img :src="listing.traveler_photo" />
         </q-avatar>
         <span
-          class="text-no-transform text-weight-bold ellipsis q-px-md"
+          class="text-no-transform ellipsis q-pl-md"
           :title="
             listing.traveler_first_name + ' ' + listing.traveler_last_name
           "
@@ -21,17 +21,17 @@
           {{ listing.traveler_first_name }} {{ listing.traveler_last_name }}
         </span>
       </div>
-      <div class="row items-center justify-center transfers-width-lg">
+      <div class="row items-center transfers-width-lg">
         <span
-          class="text-no-transform text-weight-bold ellipsis q-px-md"
+          class="text-no-transform ellipsis"
           :title="getDatetime(listing.datetime)"
         >
           {{ getDatetime(listing.datetime) }}
         </span>
       </div>
-      <div class="row items-center justify-center transfers-width-lg">
+      <div class="row items-center transfers-width-lg">
         <span
-          class="text-no-transform text-weight-bold ellipsis q-px-md"
+          class="text-no-transform ellipsis"
           :title="listing.location_title"
         >
           {{ listing.location_title }}</span

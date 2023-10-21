@@ -3,7 +3,7 @@
     <template v-for="(r, index) in transfers" :key="r.id">
       <div
         v-if="isDifferentDate(r.datetime)"
-        class="bg-dark-secondary q-py-xs q-px-sm q-mt-lg q-mb-md rounded-borders row items-center"
+        class="bg-dark-secondary text-dark q-py-xs q-px-sm q-mb-sm rounded-borders row items-center"
       >
         <img src="svg/calendar_small.svg" alt="Calendar" />
         <span class="q-ml-xs">{{ getDate(new Date(r.datetime)) }}</span>
@@ -17,7 +17,7 @@
   <template v-else>
     <transfers-list-header-desktop />
     <div v-for="(r, index) in transfers" :key="r.id">
-      <div v-if="isDifferentDate(r.datetime)" class="q-mb-md">
+      <div v-if="isDifferentDate(r.datetime)" class="q-mb-sm text-dark">
         {{ getDate(new Date(r.datetime)) }}
       </div>
       <transfers-listing-desktop

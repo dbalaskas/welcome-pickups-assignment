@@ -24,10 +24,10 @@
         </div>
         <div class="q-pa-md">
           <div>
-            <div class="row text-h6 text-weight-bold q-mb-sm">
-              <span class="text-h6 text-weight-bold border-secondary">
+            <div class="row text-h6 text-weight-bold q-mb-lg">
+              <span class="text-h6 text-weight-bold q-pb-xs border-secondary">
                 {{ getDateShort(new Date(details.datetime)) }}
-                <q-separator color="secondary" size="3px" class="q-mx-xs" />
+                <!-- <q-separator color="secondary" size="2px" class="q-mx-xs" /> -->
               </span>
             </div>
             <div>
@@ -40,13 +40,13 @@
                         {{ details.from_location_title }}
                       </div>
                       <div
-                        class="text-body2 text-dark address-width ellipsis"
+                        class="text-caption text-dark address-width ellipsis"
                         :title="details.from_location_address"
                       >
                         {{ details.from_location_address }}
                       </div>
                     </div>
-                    <div class="text-body2 text-dark text-weight-bold q-mr-sm">
+                    <div class="text-body2 text-dark q-mr-sm">
                       {{ getTime(new Date(details.from_datetime)) }}
                     </div>
                   </div>
@@ -56,13 +56,13 @@
                         {{ details.to_location_title }}
                       </div>
                       <div
-                        class="text-body2 text-dark address-width ellipsis"
+                        class="text-caption text-dark address-width ellipsis"
                         :title="details.to_location_address"
                       >
                         {{ details.to_location_address }}
                       </div>
                     </div>
-                    <div class="text-body2 text-dark text-weight-bold q-mr-sm">
+                    <div class="text-body2 text-dark q-mr-sm">
                       {{ getTime(new Date(details.to_datetime)) }}
                     </div>
                   </div>
@@ -148,21 +148,27 @@
                 </div>
               </div>
               <opportunities-list :listing="details" show-none />
-              <div class="row justify-evenly q-mt-md">
-                <q-btn
-                  color="dark-secondary"
-                  text-color="text-dark-strong"
-                  unelevated
-                >
-                  <div>Call</div>
-                </q-btn>
-                <q-btn
-                  color="dark-secondary"
-                  text-color="text-dark-strong"
-                  unelevated
-                >
-                  <div>Message</div>
-                </q-btn>
+              <div class="row q-col-gutter-sm justify-evenly q-mt-md">
+                <div class="col-6">
+                  <q-btn
+                    color="dark-secondary"
+                    text-color="text-dark-strong"
+                    class="full-width"
+                    unelevated
+                  >
+                    <div>Call</div>
+                  </q-btn>
+                </div>
+                <div class="col-6">
+                  <q-btn
+                    color="dark-secondary"
+                    text-color="text-dark-strong"
+                    class="full-width"
+                    unelevated
+                  >
+                    <div>Message</div>
+                  </q-btn>
+                </div>
               </div>
             </div>
           </div>

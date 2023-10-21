@@ -7,7 +7,7 @@
         </q-item-section>
         <q-item-section class="text-primary welcome-font">
           <div class="text-h6 text-weight-bolder">Welcome</div>
-          <div class="text-caption text-weight-bolder">FOR PARTNERS</div>
+          <div class="text-caption text-weight-bold">FOR PARTNERS</div>
         </q-item-section>
         <q-space />
         <q-btn flat rounded @click="toggleDrawer" class="bg-dark-secondary">

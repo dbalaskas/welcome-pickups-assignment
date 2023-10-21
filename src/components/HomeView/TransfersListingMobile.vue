@@ -8,7 +8,7 @@
       <div class="row items-center justify-between q-mb-sm">
         <div>
           <transfer-category-short :listing="listing" />
-          <div class="text-h6 text-weight-bold">
+          <div class="text-h6">
             {{ listing.traveler_first_name }} {{ listing.traveler_last_name }}
           </div>
         </div>
@@ -20,15 +20,15 @@
       </div>
       <div class="q-mb-sm">
         <div class="text-caption text-dark">PROPERTY</div>
-        <div class="text-weight-bold">{{ listing.property_title }}</div>
+        <div>{{ listing.property_title }}</div>
       </div>
       <div class="q-mb-sm">
         <div class="text-caption text-dark">ARRIVAL TIME</div>
-        <div class="text-weight-bold">{{ getDatetime(listing.datetime) }}</div>
+        <div>{{ getDatetime(listing.datetime) }}</div>
       </div>
       <div class="q-mb-sm">
         <div class="text-caption text-dark">FROM</div>
-        <div class="text-weight-bold">{{ listing.location_title }}</div>
+        <div>{{ listing.location_title }}</div>
       </div>
       <div>
         <div class="text-caption text-dark q-mb-sm">OPORTUNITIES</div>

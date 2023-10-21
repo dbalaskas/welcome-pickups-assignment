@@ -6,6 +6,10 @@
           <img src="svg/expand.svg" alt="Expand" />
         </q-btn>
         <q-space />
+        <div class="text-body1 text-weight-bold text-primary">
+          Transfer List
+        </div>
+        <q-space />
         <q-btn flat rounded disable>
           <img src="svg/search.svg" alt="Search" />
         </q-btn>
@@ -13,10 +17,10 @@
 
       <template v-else>
         <q-space />
-        <q-btn flat rounded disable class="margin-right-30">
+        <q-btn flat rounded disable>
           <img src="svg/profile.svg" alt="Profile" />
         </q-btn>
-        <q-btn flat rounded disable class="margin-right-30">
+        <q-btn flat rounded disable class="q-mr-md">
           <img src="svg/power_off.svg" alt="Power off" />
         </q-btn>
       </template>
