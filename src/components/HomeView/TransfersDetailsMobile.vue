@@ -31,8 +31,12 @@
               </span>
             </div>
             <div>
-              <div class="row justify-between items-center q-mb-sm">
-                <img src="svg/arrow_dotted.svg" alt="Arrow" class="q-px-md" />
+              <div class="row items-center q-mb-sm">
+                <div class="column q-px-md">
+                  <q-icon name="radio_button_unchecked" color="secondary" />
+                  <img src="svg/arrow_dotted.svg" alt="Arrow" class="q-py-sm" />
+                  <q-icon name="radio_button_unchecked" color="secondary" />
+                </div>
                 <div>
                   <div class="row justify-between q-mb-sm">
                     <div>
@@ -69,44 +73,48 @@
                 </div>
               </div>
               <div
-                class="row justify-around items-center bordered rounded-borders-lg q-mb-sm q-px-md q-py-sm"
+                class="row items-center text-dark bordered rounded-borders-lg q-mb-sm q-px-md q-py-sm"
               >
                 <span class="q-mr-md">
                   <q-icon name="group" size="20px" />
-                  <span class="text-body2 text-weight-medium q-ml-md">
+                  <span class="text-body2 q-ml-sm">
                     {{ details.passengers }}
                   </span>
                 </span>
                 <span class="q-mx-md">
                   <q-icon name="work" size="20px" />
-                  <span class="text-body2 text-weight-medium q-ml-md">
+                  <span class="text-body2 q-ml-sm">
                     {{ details.babyseats }}
                   </span>
                 </span>
                 <span class="q-mx-md">
                   <q-icon name="business_center" size="20px" />
-                  <span class="text-body2 text-weight-medium q-ml-md">
+                  <span class="text-body2 q-ml-sm">
                     {{ details.luggage }}
                   </span>
                 </span>
                 <span class="q-mx-md">
                   <q-icon name="airline_seat_recline_extra" size="20px" />
-                  <span class="text-body2 text-weight-medium q-ml-md">
+                  <span class="text-body2 q-ml-sm">
                     {{ details.hand_luggage }}
                   </span>
                 </span>
+                <q-space />
+                <q-btn flat rounded dense>
+                  <q-icon name="expand_more" size="20px" />
+                </q-btn>
               </div>
               <div
                 v-if="details.flight_status"
-                class="row justify-around items-center bordered rounded-borders-lg q-mb-sm q-px-md q-py-sm"
+                class="row items-center text-dark bordered rounded-borders-lg q-mb-sm q-px-md q-py-sm"
               >
-                <q-icon name="flight_takeoff" size="20px" />
-                <span class="text-body2 text-weight-medium q-px-sm">
+                <q-icon name="flight_takeoff" size="20px" class="q-pr-sm" />
+                <span class="text-body2 text-weight-medium q-pr-sm">
                   {{ details.flight_status.flight_number }}
                 </span>
                 <q-separator vertical class="q-mx-sm" />
-                <q-icon name="schedule" size="20px" />
-                <span class="text-body2 text-weight-medium q-px-sm">
+                <q-icon name="schedule" size="20px" class="q-px-sm" />
+                <span class="text-body2 text-weight-medium q-pr-sm">
                   {{ details.flight_status.flight_time }}
                 </span>
                 <q-separator vertical class="q-mx-sm" />
@@ -153,8 +161,9 @@
                   <q-btn
                     color="dark-secondary"
                     text-color="text-dark-strong"
-                    class="full-width"
+                    class="full-width rounded-borders-xs"
                     unelevated
+                    no-caps
                   >
                     <div>Call</div>
                   </q-btn>
@@ -163,8 +172,9 @@
                   <q-btn
                     color="dark-secondary"
                     text-color="text-dark-strong"
-                    class="full-width"
+                    class="full-width rounded-borders-xs"
                     unelevated
+                    no-caps
                   >
                     <div>Message</div>
                   </q-btn>

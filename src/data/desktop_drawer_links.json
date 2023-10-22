@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Live View",
+    "img": "svg/live.svg"
+  },
+  {
+    "title": "Scheduled",
+    "img": "svg/scheduled.svg"
+  },
+  {
+    "title": "Statistics",
+    "img": "svg/statistics.svg"
+  },
+  {
+    "title": "Revenue",
+    "img": "svg/revenue.svg"
+  },
+  {
+    "title": "Settings",
+    "img": "svg/settings.svg"
+  },
+  {
+    "title": "space"
+  },
+  {
+    "title": "separator",
+    "desktop": true
+  },
+  {
+    "title": "Support",
+    "img": "svg/support.svg",
+    "desktop": true
+  },
+  {
+    "title": "Collapse Menu",
+    "img": "svg/collapse.svg",
+    "desktop": true
+  }
+]

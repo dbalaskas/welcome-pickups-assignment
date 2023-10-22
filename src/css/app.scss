@@ -61,16 +61,6 @@ body {
   height: 70px !important;
 }
 
-.active-item {
-  // filter: brightness(0) invert(1);
-  background: $secondary;
-  color: $white;
-}
-
-.active-svg {
-  filter: brightness(0) invert(1);
-}
-
 // Classes to implement left-drawer with 82px width.
 
 // .q-header {
@@ -179,4 +169,21 @@ body {
 .q-pt-xxs {
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.header-caption {
+  font-size: 0.6rem;
+  font-weight: 600;
+  line-height: 0.25rem;
+  letter-spacing: 0.03333em;
+}
+
+.active-item {
+  // filter: brightness(0) invert(1);
+  background: $secondary;
+  color: $white;
+}
+
+.active-svg {
+  filter: brightness(0) invert(1);
 }

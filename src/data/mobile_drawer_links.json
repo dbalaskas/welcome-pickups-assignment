@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Live View",
+    "img": "svg/live.svg"
+  },
+  {
+    "title": "Scheduled",
+    "img": "svg/scheduled.svg"
+  },
+  {
+    "title": "Statistics",
+    "img": "svg/statistics.svg"
+  },
+  {
+    "title": "Revenue",
+    "img": "svg/revenue.svg"
+  },
+  {
+    "title": "Settings",
+    "img": "svg/settings.svg"
+  },
+  {
+    "title": "separator"
+  },
+  {
+    "title": "space"
+  }
+]

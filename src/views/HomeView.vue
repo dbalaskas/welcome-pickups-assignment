@@ -15,6 +15,7 @@
     </template>
   </template>
   <template v-else>
+    <div class="text-h5 q-mb-md">Tranfers</div>
     <transfers-list-header-desktop />
     <div v-for="(r, index) in transfers" :key="r.id">
       <div v-if="isDifferentDate(r.datetime)" class="q-mb-sm text-dark">

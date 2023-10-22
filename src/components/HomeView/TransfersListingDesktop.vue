@@ -1,7 +1,7 @@
 <template>
   <q-btn
     flat
-    class="full-width bg-white rounded-borders-sm q-px-sm q-py-xs q-mb-sm"
+    class="full-width bg-white rounded-borders-xs q-px-xs q-py-xs q-mb-sm"
     @click="openListing"
   >
     <div class="row no-wrap full-width">

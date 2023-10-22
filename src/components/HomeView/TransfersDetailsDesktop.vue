@@ -70,7 +70,15 @@
                   <!-- <q-separator color="secondary" size="3px" class="q-mx-xs" /> -->
                 </span>
                 <div class="row items-center details-bar-width justify-between">
-                  <img src="svg/arrow_dotted.svg" alt="Arrow" class="q-px-sm" />
+                  <div class="q-px-sm column">
+                    <q-icon name="radio_button_unchecked" color="secondary" />
+                    <img
+                      src="svg/arrow_dotted.svg"
+                      alt="Arrow"
+                      class="q-py-sm"
+                    />
+                    <q-icon name="radio_button_unchecked" color="secondary" />
+                  </div>
                   <div>
                     <div class="row justify-between q-mb-md">
                       <div>

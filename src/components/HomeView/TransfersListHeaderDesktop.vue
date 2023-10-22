@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-dark-secondary text-dark q-pa-sm rounded-borders-sm row no-wrap items-center q-mb-md"
+    class="bg-dark-secondary text-dark q-px-xs q-py-sm rounded-borders-xs row no-wrap items-center q-mb-md"
   >
     <div class="text-center transfers-width-sm">STATUS</div>
     <div class="text-left transfers-width-lg">TRAVELLER</div>
