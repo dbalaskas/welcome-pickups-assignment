@@ -3,8 +3,25 @@
 @import url("https://fonts.googleapis.com/css?family=Gabarito&display=swap");
 
 body {
-  font-family: "Gabarito", sans-serif;
+  font-family: museo-sans, sans-serif;
   color: $dark-strong; // rgba(45, 59, 78, 0.5)
+}
+
+.text-caption2 {
+  font-size: 0.6rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.03333em;
+}
+
+.bg-primary {
+  background: $primary;
+  color: #fff;
+}
+
+.bg-secondary {
+  // filter: brightness(0) invert(1);
+  background: $secondary;
+  color: #fff;
 }
 
 .welcome-font {
@@ -13,15 +30,15 @@ body {
 
 .bg-dark {
   background: $dark;
-  color: $dark-strong;
-}
-
-.bg-dark {
-  color: $dark-strong;
 }
 
 .bg-dark-secondary {
   background: $dark-secondary;
+  color: $dark-strong;
+}
+
+.bg-dark-third {
+  background: $dark-third;
   color: $dark-strong;
 }
 
@@ -35,8 +52,16 @@ body {
   color: $dark-strong;
 }
 
+.text-dark {
+  color: $dark;
+}
+
 .rounded-borders {
-  border-radius: 15px;
+  border-radius: 12px;
+}
+
+.rounded-borders-md {
+  border-radius: 16px;
 }
 
 .rounded-borders-lg {
@@ -44,10 +69,14 @@ body {
 }
 
 .rounded-borders-sm {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .rounded-borders-xs {
+  border-radius: 6px;
+}
+
+.rounded-borders-xxs {
   border-radius: 4px;
 }
 
@@ -141,11 +170,11 @@ body {
 }
 
 .border-r {
-  border-right: 0.5px #dddddd solid;
+  border-right: 0.5px $border-color solid;
 }
 
 .bordered {
-  border: 0.5px #dddddd solid;
+  border: 0.5px $border-color solid;
 }
 
 .border-secondary {
@@ -172,18 +201,24 @@ body {
 }
 
 .header-caption {
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 600;
   line-height: 0.25rem;
   letter-spacing: 0.03333em;
 }
 
-.active-item {
-  // filter: brightness(0) invert(1);
-  background: $secondary;
-  color: $white;
-}
-
 .active-svg {
   filter: brightness(0) invert(1);
+}
+
+.q-separator {
+  background: $border-color;
+}
+
+.shadow {
+  box-shadow: 0px 0px 8px 0px rgba(45, 59, 78, 0.1);
+}
+
+.q-dialog__backdrop {
+  background: rgba(45, 59, 78, 0.85);
 }

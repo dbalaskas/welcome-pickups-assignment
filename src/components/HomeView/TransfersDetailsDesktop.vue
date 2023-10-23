@@ -1,7 +1,7 @@
 <template>
   <q-dialog ref="dialogRef" :transition-show="transition">
     <div
-      class="row fit justify-between items-center"
+      class="row fit justify-center items-center"
       style="max-width: initial !important"
     >
       <q-btn
@@ -14,13 +14,18 @@
       >
         <img src="svg/arrow_left.svg" alt="Previous" />
       </q-btn>
-      <q-card class="dialog-container">
-        <q-card-section class="row full-height">
+      <q-card class="dialog-container rounded-borders-sm">
+        <div class="row full-height">
           <div class="col-4 q-pa-lg border-r">
             <div class="q-mb-md text-center">
-              <q-avatar size="70px">
-                <img :src="details.traveler_photo" />
-              </q-avatar>
+              <template v-if="details.traveler_photo">
+                <q-avatar size="83px">
+                  <img :src="details.traveler_photo" />
+                </q-avatar>
+              </template>
+              <span v-else class="bg-light q-pa-md rounded-borders-lg">
+                <img :src="'svg/profile.svg'" size="83" />
+              </span>
             </div>
             <div
               class="text-h6 text-weight-bold text-center"
@@ -63,13 +68,12 @@
           </div>
           <div class="col-8 q-pa-lg">
             <div class="text-h5 text-weight-bold q-mb-md">Transfers</div>
-            <div class="bg-light-secondary rounded-borders q-pa-lg">
+            <div class="bg-dark-secondary rounded-borders-xs q-pa-lg">
               <div class="q-gutter-md no-margin">
                 <span class="text-h6 text-weight-bold q-pb-xs border-secondary">
                   {{ getDateShort(new Date(details.datetime)) }}
-                  <!-- <q-separator color="secondary" size="3px" class="q-mx-xs" /> -->
                 </span>
-                <div class="row items-center details-bar-width justify-between">
+                <div class="row full-width items-center details-bar-width">
                   <div class="q-px-sm column">
                     <q-icon name="radio_button_unchecked" color="secondary" />
                     <img
@@ -95,7 +99,9 @@
                           {{ details.from_location_address }}
                         </div>
                       </div>
-                      <div class="text-body2 text-dark q-mr-sm">
+                      <div
+                        class="text-body2 text-dark text-weight-bold q-mr-sm"
+                      >
                         {{ getTime(new Date(details.from_datetime)) }}
                       </div>
                     </div>
@@ -114,55 +120,57 @@
                           {{ details.to_location_address }}
                         </div>
                       </div>
-                      <div class="text-body2 text-dark q-mr-sm">
+                      <div
+                        class="text-body2 text-dark text-weight-bold q-mr-sm"
+                      >
                         {{ getTime(new Date(details.to_datetime)) }}
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="details-bar-width bg-dark-secondary text-dark rounded-borders-lg q-px-md q-py-sm"
+                  class="details-bar-width bg-dark-third text-dark rounded-borders-lg q-px-md q-py-sm"
                 >
                   <div class="row q-gutter-md items-center">
-                    <span>
-                      <q-icon name="group" size="20px" />
+                    <div class="row items-center">
+                      <img src="svg/passengers.svg" alt="passengers" />
                       <span class="text-body2 q-ml-sm">
                         {{ details.passengers }}
                       </span>
-                    </span>
-                    <span>
-                      <q-icon name="work" size="20px" />
+                    </div>
+                    <div class="row items-center">
+                      <img src="svg/child_seat.svg" alt="child seat" />
                       <span class="text-body2 q-ml-sm">
                         {{ details.babyseats }}
                       </span>
-                    </span>
-                    <span>
-                      <q-icon name="business_center" size="20px" />
+                    </div>
+                    <div class="row items-center">
+                      <img src="svg/luggage.svg" alt="luggage" />
                       <span class="text-body2 q-ml-sm">
                         {{ details.luggage }}
                       </span>
-                    </span>
-                    <span>
-                      <q-icon name="airline_seat_recline_extra" size="20px" />
+                    </div>
+                    <div class="row items-center">
+                      <img src="svg/hand_luggage.svg" alt="hand luggage" />
                       <span class="text-body2 q-ml-sm">
                         {{ details.hand_luggage }}
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
                 <div
-                  class="details-bar-width bg-dark-secondary text-dark rounded-borders-lg q-px-md q-py-sm"
+                  class="details-bar-width bg-dark-third text-dark rounded-borders-lg q-px-md q-py-sm"
                 >
                   <div
                     v-if="details.flight_status"
                     class="row justify-around items-center"
                   >
-                    <q-icon name="flight_takeoff" size="20px" />
+                    <q-icon name="flight_takeoff" size="20" />
                     <span class="text-body2 q-px-sm">
                       {{ details.flight_status.flight_number }}
                     </span>
                     <q-separator vertical class="q-mx-sm" />
-                    <q-icon name="schedule" size="20px" />
+                    <q-icon name="schedule" size="20" />
                     <span class="text-body2 q-px-sm">
                       {{ details.flight_status.flight_time }}
                     </span>
@@ -184,7 +192,7 @@
           >
             <img src="svg/close.svg" alt="Close" />
           </q-btn>
-        </q-card-section>
+        </div>
       </q-card>
       <q-btn
         rounded

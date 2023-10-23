@@ -28,19 +28,23 @@ export function getDate(date) {
     day: "numeric",
     month: "long",
   };
-  const today = new Date();
   const curDay = new Date(date);
   curDay.setHours(0, 0, 0, 0);
 
-  const tomorrow = new Date();
-  const yesterday = new Date();
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  if (curDay.getTime() == today.getTime()) return "Today";
 
+  const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
   tomorrow.setHours(0, 0, 0, 0);
-  if (curDay == tomorrow) return "Tomorrow";
+  if (curDay.getTime() == tomorrow.getTime()) return "Tomorrow";
+
+  const yesterday = new Date();
   yesterday.setDate(today.getDate() - 1);
   yesterday.setHours(0, 0, 0, 0);
-  if (curDay == yesterday) return "Yesterday";
+  if (curDay.getTime() == yesterday.getTime()) return "Yesterday";
+
   return date.toLocaleString("en-gb", options);
 }
 

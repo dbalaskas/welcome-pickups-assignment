@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="q.screen.gt.xs" class="text-h5 text-weight-bolder q-mb-md">
+    <div v-if="q.screen.gt.xs" class="text-h5 text-weight-bold q-mb-md">
       {{ title }}
     </div>
     <slot name="body" />

@@ -3,6 +3,52 @@
     "id": 1,
     "from_location_title": "The Athens Gate Hotel",
     "from_location_address": "10 Syngrou Av.Athens 11742, Greece",
+    "from_datetime": "2023-10-22T14:20:00+02:00",
+    "to_location_title": "Athens Airport",
+    "to_location_address": "Attiki Odos, Spata Artemida 190 04",
+    "to_datetime": "2023-10-22T15:20:00+02:00",
+    "passengers": 2,
+    "babyseats": 1,
+    "luggage": 3,
+    "hand_luggage": 2,
+    "flight_status": {
+      "flight_number": "LAX 124",
+      "flight_time": "10:00",
+      "flight_status": "On time"
+    },
+    "traveler": {
+      "phone_number": "+131244123",
+      "email": "sergeyshandarin@gmail.com",
+      "country": "Russia"
+    }
+  },
+  {
+    "id": 1,
+    "from_location_title": "The Athens Gate Hotel",
+    "from_location_address": "10 Syngrou Av.Athens 11742, Greece",
+    "from_datetime": "2023-10-23T14:20:00+02:00",
+    "to_location_title": "Athens Airport",
+    "to_location_address": "Attiki Odos, Spata Artemida 190 04",
+    "to_datetime": "2023-10-23T15:20:00+02:00",
+    "passengers": 2,
+    "babyseats": 1,
+    "luggage": 3,
+    "hand_luggage": 2,
+    "flight_status": {
+      "flight_number": "LAX 124",
+      "flight_time": "10:00",
+      "flight_status": "On time"
+    },
+    "traveler": {
+      "phone_number": "+131244123",
+      "email": "sergeyshandarin@gmail.com",
+      "country": "Russia"
+    }
+  },
+  {
+    "id": 1,
+    "from_location_title": "The Athens Gate Hotel",
+    "from_location_address": "10 Syngrou Av.Athens 11742, Greece",
     "from_datetime": "2023-06-01T14:20:00+02:00",
     "to_location_title": "Athens Airport",
     "to_location_address": "Attiki Odos, Spata Artemida 190 04",

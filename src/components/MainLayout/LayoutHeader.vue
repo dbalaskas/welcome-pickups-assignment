@@ -1,5 +1,5 @@
 <template>
-  <q-header class="bg-white" elevated>
+  <q-header class="bg-white shadow">
     <q-toolbar class="header-height no-padding">
       <template v-if="isSmallScreen(q.screen.width)">
         <q-btn flat rounded @click="toggleDrawer">

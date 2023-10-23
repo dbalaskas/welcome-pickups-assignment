@@ -6,12 +6,17 @@
   >
     <div class="row no-wrap full-width">
       <div class="row items-center justify-center transfers-width-sm">
-        <transfer-category :listing="listing" />
+        <transfer-category-short :listing="listing" />
       </div>
       <div class="row items-center transfers-width-lg">
-        <q-avatar class="row items-center" size="35px">
-          <img :src="listing.traveler_photo" />
-        </q-avatar>
+        <template v-if="listing.traveler_photo">
+          <q-avatar class="row items-center" size="38px">
+            <img :src="listing.traveler_photo" />
+          </q-avatar>
+        </template>
+        <span v-else class="row bg-light q-pa-md rounded-borders-lg">
+          <img :src="'svg/profile.svg'" size="38" />
+        </span>
         <span
           class="text-no-transform ellipsis q-pl-md"
           :title="
@@ -47,13 +52,13 @@
 <script>
 import { defineComponent } from "vue";
 import { getDatetime } from "../../utils";
-import TransferCategory from "../TransferCategory.vue";
+import TransferCategoryShort from "../TransferCategoryShort.vue";
 import OpportunitiesListShort from "../OpportunitiesListShort.vue";
 
 export default defineComponent({
   name: "TransfersListingDesktop",
   components: {
-    TransferCategory,
+    TransferCategoryShort,
     OpportunitiesListShort,
   },
   props: {
