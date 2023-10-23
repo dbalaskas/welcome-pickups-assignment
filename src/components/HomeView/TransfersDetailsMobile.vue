@@ -171,7 +171,7 @@
                   >
                     <div class="row items-center">
                       <img src="svg/phone.svg" alt="phone" class="q-mr-sm" />
-                      <span> Call </span>
+                      <span class="text-weight-bold"> Call </span>
                     </div>
                   </q-btn>
                 </div>
@@ -185,7 +185,7 @@
                   >
                     <div class="row items-center">
                       <img src="svg/chat.svg" alt="chat" class="q-mr-sm" />
-                      <span> Message </span>
+                      <span class="text-weight-bold"> Message </span>
                     </div>
                   </q-btn>
                 </div>
